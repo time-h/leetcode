@@ -1,0 +1,15 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        l = len(nums)
+        map = {}
+        for i in range(l):
+            map[nums[i]] = i
+
+        for i in range(l):
+            if ((target - nums[i]) in map) and (map[target - nums[i]] != i):
+                return [i,map[target - nums[i]]]
