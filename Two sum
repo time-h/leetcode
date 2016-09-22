@@ -6,7 +6,11 @@ class Solution(object):
         :rtype: List[int]
         """
         l = len(nums)
+        
+        #use dict(hashmap) 
         map = {}
+        
+        #key-nums, value=i(indice)
         for i in range(l):
             map[nums[i]] = i
 
